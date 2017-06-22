@@ -14,17 +14,17 @@ commands:
   description: "Allows you to register your account."
   usage: "/register <password>"
   permission: vmauthentication.command.register
-    creative:
+ creative:
         usage: /gmc
         description: Changes gamemode to creative.
-    survival:
+ survival:
         usage: /gms
         description: Changes gamemode to survival
 permissions:
-    vmlimited.creative:
+ vmlimited.creative:
         default: op
         description: Lets you use /gmc
-    vmlimited.survival:
+ vmlimited.survival:
         default: op
         description: Lets you use /gms
  vmauthentication:
