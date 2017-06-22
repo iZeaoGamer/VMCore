@@ -1,0 +1,41 @@
+name: VMAuthentication
+main: VMAuthentication\VMAuthentication
+version: 5.0.0
+api: [3.0.0-ALPHA5, 3.0.0-ALPHA6, 3.0.0-ALPHA7]
+load: STARTUP
+author: Zeao
+description: A newly made authentication system.
+commands:
+ login:
+  description: "Allows you to login into your account."
+  usage: "/login <password>"
+  permission: vmauthentication.command.login
+ register:
+  description: "Allows you to register your account."
+  usage: "/register <password>"
+  permission: vmauthentication.command.register
+
+permissions:
+ vmauthentication:
+  default: op
+  description: "Allows using everything vmauthentication has to offer."
+  children:
+   vmauthentication.chat:
+    description: "Allows using the chat while not being authenticated"
+    default: false
+   vmauthentication.move:
+    description: "Allows moving while not being authenticated"
+    default: false
+   vmauthentication.lastid:
+    description: "Allows authenticating using the last id when enabled in the config"
+    default: true
+   vmauthentication.command:
+    description: "Allows using vmauthentication commands"
+    default: true
+    children:
+     vmauthentication.command.register:
+      description: "Allows registering an account"
+      default: true
+     vmauthentication.command.login:
+      description: "Allows logging into an account"
+      default: true
