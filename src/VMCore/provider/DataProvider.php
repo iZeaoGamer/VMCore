@@ -1,5 +1,4 @@
-<?php
-
+<<?php
 namespace VMAuthentication\provider;
 
 use pocketmine\IPlayer;
