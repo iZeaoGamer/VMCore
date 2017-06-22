@@ -1,5 +1,4 @@
 <?php
-
 /*
  * This plugin is made by Zeao. Enjoy with this plugin.
  * WARNING - This may not work on PHP 7. As always, I'm trying to update the
@@ -8,7 +7,7 @@
  * 
  */
         
-namespace SimpleAuth;
+namespace VMAuthentication;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\IPlayer;
@@ -20,17 +19,17 @@ use pocketmine\OfflinePlayer;
 use pocketmine\Server;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
-use SimpleAuth\event\PlayerAuthenticateEvent;
-use SimpleAuth\event\PlayerDeauthenticateEvent;
-use SimpleAuth\event\PlayerRegisterEvent;
-use SimpleAuth\event\PlayerUnregisterEvent;
-use SimpleAuth\provider\DataProvider;
-use SimpleAuth\provider\DummyDataProvider;
-use SimpleAuth\provider\MySQLDataProvider;
-use SimpleAuth\provider\SQLite3DataProvider;
-use SimpleAuth\provider\YAMLDataProvider;
-use SimpleAuth\task\ShowMessageTask;
-class SimpleAuth extends PluginBase{
+use VMAuthentication\event\PlayerAuthenticateEvent;
+use VMAuthentication\event\PlayerDeauthenticateEvent;
+use VMAuthentication\event\PlayerRegisterEvent;
+use VMAuthentication\event\PlayerUnregisterEvent;
+use VMAuthentication\provider\DataProvider;
+use VMAuthentication\provider\DummyDataProvider;
+use VMAuthentication\provider\MySQLDataProvider;
+use VMAuthentication\provider\SQLite3DataProvider;
+use VMAuthentication\provider\YAMLDataProvider;
+use VMAuthentication\task\ShowMessageTask;
+class VMAuthentication extends PluginBase{
 	/** @var PermissionAttachment[] */
 	protected $needAuth = [];
 	/** @var EventListener */
@@ -465,4 +464,3 @@ class SimpleAuth extends PluginBase{
                 
                 }
 }
-                
